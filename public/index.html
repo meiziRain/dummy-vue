@@ -1,15 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>dummy-vue</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title>Dummy</title>
+    <!-- Fonts Form Google Font ::- http://www.googlefonts.cn/english  -::  -->
+    <link
+      href="https://fonts.font.im/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Cabin+Sketch|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur"
+      rel="stylesheet"
+    />
+    <!-- End Fonts  -->
+
+    <!-- flashword 所需js -->
+    <script type="text/javascript" src="js/charming.min.js"></script>
+    <script type="text/javascript" src="js/TweenMax.min.js"></script>
+    <!-- font-awesome  ::- https://fontawesome.com/  -::  -->
+    <script src="https://use.fontawesome.com/41bf4066ba.js"></script>
+    <style>
+      /* Start Global rules */
+      :root {
+        overflow-y: overlay;
+        overflow-x: hidden;
+        --color-main: #5e72e4;
+
+        /* #d94f5c */
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body ::selection {
+        color: var(--color-main);
+      }
+      button:focus,
+      a:focus {
+        outline: none;
+      }
+      input,
+      button,
+      a {
+        outline: 0 none !important;
+      }
+      /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+      ::-webkit-scrollbar {
+        /* 页面有全屏background-image情况时，滚动条的背景也要处理，否则会有缝隙 */
+        background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+        width: 4px;
+        height: 2px;
+      }
+      /*定义滚动条轨道*/
+      ::-webkit-scrollbar-track {
+        background-color: transparent;
+        -webkit-border-radius: 2em;
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+      }
+      /*定义滑块 内阴影+圆角*/
+      ::-webkit-scrollbar-thumb {
+        background-color: #fed6e3;
+        background-image: -webkit-linear-gradient(
+          45deg,
+          #a8edea 25%,
+          transparent 25%,
+          transparent 50%,
+          #a8edea 50%,
+          #a8edea 75%,
+          transparent 75%,
+          transparent
+        );
+        -webkit-border-radius: 2em;
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+      }
+
+      /* chrome 浏览器自动填充密码后输入框的颜色 */
+      input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
+      }
+      /* End Global rules */
+      /* Start body rules */
+      body {
+        overflow-x: hidden;
+        background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+        background-position: center center;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        font-family: "Vibur", cursive;
+        /*   the main font */
+        font-family: "Abel", sans-serif;
+        opacity: 0.95;
+      }
+      /* |||||||||||||||||||||||||||||||||||||||||||||*/
+    </style>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but dummy-vue doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong
+        >We're sorry but dummy-vue doesn't work properly without JavaScript
+        enabled. Please enable it to continue.</strong
+      >
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
